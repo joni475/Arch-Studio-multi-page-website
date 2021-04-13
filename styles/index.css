@@ -1,0 +1,801 @@
+html {
+    font-size: 100%;
+    box-sizing: border-box;
+}
+ *, *::after, *::before {
+    box-sizing: inherit;
+}
+:root {
+   --very-dark-blue: #1b1d23;
+   --dark-gray: #60636d;
+   --medium-gray: #7d828f;
+   --light-gray: #c8ccd8;
+   --very-light-gray: #eeeff4;
+   --red: #df5656;
+}
+body {
+    padding: 0;
+    margin: 0;
+    line-height: 1.5;
+    font-size: 0.9em;
+    font-family: "Spartan", sans-serif; 
+}
+.wrapper {
+    margin: 0 auto;
+}
+.overlay {
+    position: fixed;
+    top: 5.5em;;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    display: none;
+    cursor: not-allowed;
+    background-color:rgba(0,0,0, 0.5);
+}
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    letter-spacing: 1px;;
+    padding: 1.5em 2em;
+    color: #fff;
+    font-weight: 700;
+    background-color: var(--very-dark-blue);
+}
+.btn:hover {
+    background-color: var(--medium-gray);
+}
+.btn:active {
+    opacity: 0.4;
+}
+.arrow {
+    font-size: 2em;
+    padding-left: 1em;
+}
+h1 {
+    font-size: 4.5em;
+}
+h2 {
+    font-size: 3.5em;
+    line-height: 1;
+}
+h3 {
+   font-size: 2.5em;
+   line-height: 1.2;
+}
+
+/* nav styling stars here */
+
+.logo {
+    cursor: pointer;
+    width: 5em;
+}
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5em;
+    position: relative;
+    
+}
+.nav-links {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    position: relative;
+}
+.nav-links a {
+    text-decoration: none;
+    color: var(--very-dark-blue);
+    font-weight: 600;
+    margin-left: 3em;
+    position: relative;
+}
+.close,
+.hamburger {
+    border: none;
+    background: transparent;
+    position: absolute;
+    top: 2.5em;
+    right: 1.5em;
+    z-index: 3;
+    outline: none;
+    display: none;
+    cursor: pointer;
+}
+.close.show{
+    display: block;
+}
+.home {
+    display: none;
+}
+.nav-links a::after {
+    content: "";
+    background-color: var(--very-dark-blue);
+    height: 2px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: -18px;
+    transition: transform 0.2s ease;
+    opacity: 0;
+}
+.nav-links a:hover::after {
+    transform: translateY(-15px);
+    opacity: 1;
+}
+
+/* heading styling starts here */
+header {
+    color: #fff;
+    overflow: hidden;
+    position: relative;
+}
+
+.fade {
+    position: relative;
+}
+.image-header-one {
+    background: linear-gradient(to bottom,rgba(0,0,0,0.2),rgba(0,0,0, 0.5)),
+  url(../assets/home/mobile/image-hero-paramour.jpg);
+}
+ .image-header-two {
+    background: linear-gradient(to bottom,rgba(0,0,0,0.2),rgba(0,0,0, 0.5)),
+    url(../assets/home/mobile/image-hero-seraph.jpg);
+
+}
+ .image-header-three {
+    background: linear-gradient(to bottom, rgba(0,0,0,0.2),rgba(0,0,0, 0.5)),
+    url(../assets/home/mobile/image-hero-federal.jpg);
+}
+.image-header-four {
+    background: linear-gradient(to bottom,rgba(0,0,0,0.6),rgba(0,0,0, 0.7)),
+    url(../assets/home/mobile/image-hero-trinity.jpg);
+}  
+.image-header-one,
+.image-header-two,
+.image-header-three,
+.image-header-four {
+     background-repeat: no-repeat;
+     background-size: cover;
+     height: 35em;
+     object-fit: cover;
+     width: 100%;
+}
+
+.slide-header {
+    width: 7em; 
+    margin: 0;
+    position: absolute;
+    top: 2em;
+    left: 0.5em;
+}
+.head-para {
+    width: 80%;
+    position: absolute;
+    top: 14em;
+    left: 2em;
+} 
+  .btn-head {
+     position: absolute;
+     bottom: 6em;
+     left: 2em;
+ }
+ .para-header {
+     padding: 0 2em 0 3em;
+ }
+.span-btn,
+.slide {
+    display: none; 
+} 
+
+/* main class styling starts here */
+.main-welcome {
+    padding: 4em 2em 6em 2em;
+}
+.hrz {
+    width: 1px;
+    height: 3em;
+    transform: rotate(90deg);
+    background-color: var(--medium-gray);
+    align-self: flex-start;
+    margin-left: 2em;
+    margin-bottom: 2em;
+}
+.faded-welcome {
+    display: none;
+}
+.main-paragraph h3 {
+    width: 8em;
+}
+.big-ideas {
+    background: linear-gradient(to bottom,rgba(0,0,0,0.2), rgba(0,0,0,0.5)),
+     url(../assets/home/mobile/image-small-team.jpg);
+     background-repeat: no-repeat;
+     background-size: cover;
+     width: 100%;
+     height: 35em;
+     object-fit: cover;
+     color: #fff;
+     display: flex;
+     flex-direction: column;
+     align-items: flex-start;
+     justify-content: center;
+     padding: 0 2em;
+}
+.big-ideas h3 {
+    width: 8em;
+}
+.featured {
+  display: flex;
+  flex-direction: column; 
+  justify-content: center; 
+  margin: 1em 2em 10em 2em;
+}
+.head-featured h3{
+   margin: 2em 0 1.5em 0; 
+    
+}
+.featured-project-one {
+    background: linear-gradient(to bottom,rgba(0,0,0,0.2),
+     rgba(0,0,0,0.5)), url(../assets/portfolio/mobile/image-del-sol.jpg);
+}
+.featured-project-two {
+    background: linear-gradient(to bottom, rgba(0,0,0,0.2),
+      rgba(0,0,0,0.5)),url(../assets/portfolio/mobile/image-228b.jpg);
+}
+.featured-project-three {
+    background: linear-gradient(to bottom, rgba(0,0,0,0.2),
+     rgba(0,0,0,0.5)),url(../assets/portfolio/mobile/image-prototype.jpg);
+}
+.featured-project-one,
+.featured-project-two,
+.featured-project-three {
+    background-repeat: no-repeat;
+    background-size: cover;  
+    background-position: center; 
+    width: 100%;
+    height: 15em;;
+    display: flex;
+    align-items: flex-end;
+    cursor: pointer;
+    margin-bottom: 2em;
+    color: #fff;
+} 
+
+.featured-wrapper {
+    margin: 1em;
+}
+.pro-name {
+    margin-bottom: 0.5em;
+    font-size: 1.2em;
+    font-weight: 600;
+}
+.link-featured {
+    color: var(--very-light-gray);
+    margin: 0;
+    cursor: pointer;
+}
+.num-feature {
+    display: none;
+} 
+/* footer starts here */
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--very-light-gray);
+    position: relative;
+}
+.footer-logo {
+    text-align: center;
+    padding: 3em 2em;
+    top: -4em;
+    cursor: pointer;
+    background-color: var(--very-dark-blue);
+    position: absolute;
+}
+.footer-img {
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(230deg) brightness(101%) contrast(102%);
+    width: 5em;
+    text-align: center;
+}
+.footer-link {
+    list-style-type: none;
+    font-weight: 700;
+    padding: 0;
+    margin-top: 5em;
+}
+.footer-link li {
+    margin: 2em 0;
+}
+.footer-link a {
+    color: var(--dark-gray);
+    text-decoration: none;  
+}
+.footer-link a:hover {
+    opacity: 0.5;
+}
+.footer-btn {
+    margin-bottom: 3em;
+}
+
+
+@media (max-width: 757px){
+    .nav-links {
+        position: fixed;
+        flex-direction: column;
+        align-items: flex-start;
+        top: 5.5em;
+        color: var(--very-dark-blue);
+        background-color: var(--very-light-gray);
+        width: 100%;
+        left: 5%;
+        z-index: 2;
+        transform: translateX(140%);
+        transition: 0.5s ease;
+    }
+    .nav-links li:first-child {
+        margin-top: 3em;
+    }
+    .nav-links li:last-child {
+        margin-bottom: 3em;
+    }
+     .nav-links li {
+        margin: 1em 0 1em 3em;;
+    }
+    .nav-links a {
+        font-weight: 800;
+        font-size: 1.2em;
+        margin: 0;
+    }
+    .nav-links.show {
+       transform: translateX(0);
+    }
+    .hamburger {
+         display: block;
+         cursor: pointer;
+    }
+    .nav-logo {
+        margin-right: auto;
+    }
+ }
+ 
+
+@media (min-width: 758px) and (max-width: 1024px) {   
+   nav {
+       padding: 2.5em 7.5em;
+       justify-content: flex-start;
+   } 
+ 
+   .nav-links li{
+       padding-left: 3em;
+   } 
+   .nav-links a {
+    margin: 0;
+ }
+  .line {
+      width: 1px;
+      height: 4.7em;
+      background-color: var(--medium-gray);
+      position: absolute;
+      left: 5em;
+      top: 0;
+      opacity: 0.6;
+  }
+  .home {
+     display: block;
+     position: absolute;
+     left: -3em;
+     top: 9em;
+     opacity: 0.6;
+     color: var(--medium-gray);
+     transform: rotate(90deg);
+     letter-spacing: 0.5em;
+  }
+  header,
+  main {
+      padding: 0 7.5em;
+  }
+  .slide-header {
+    top: 4em;
+    left: 1em;
+}
+.head-para {
+    top: 21em;
+    left: 4em;
+} 
+.btn-head {
+     bottom: 11em;
+     left: 4em;
+ }
+  .image-header-one {
+      background: linear-gradient(to bottom, rgba(0,0,0,0.2),
+      rgba(0,0,0,0.5)), url(../assets/home/tablet/image-hero-paramour.jpg);
+  }
+  .image-header-two {
+    background: linear-gradient(to bottom, rgba(0,0,0,0.2),
+    rgba(0,0,0,0.5)), url(../assets/home/tablet/image-hero-seraph.jpg);
+}
+.image-header-three {
+    background: linear-gradient(to bottom, rgba(0,0,0,0.2),
+    rgba(0,0,0,0.5)), url(../assets/home/tablet/image-hero-federal.jpg);
+}
+.image-header-four {
+    background: linear-gradient(to bottom, rgba(0,0,0,0.2),
+    rgba(0,0,0,0.5)), url(../assets/home/tablet/image-hero-trinity.jpg);
+}
+.image-header-one,
+.image-header-two,
+.image-header-three,
+.image-header-four {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 45em;
+    background-size: cover;
+}
+  .span-btn {
+      display: none;
+  }
+  .hrz {
+      display: none;
+  }
+  .main-welcome {
+      padding: 2em 0 8em 0;
+  }
+  .main-welcome h3 {
+      margin: 0 0 1em 0;
+  }
+  .big-ideas {
+    background: linear-gradient(to bottom, rgba(0,0,0,0.2),
+    rgba(0,0,0,0.5)), url(../assets/home/tablet/image-small-team.jpg);
+    background-repeat: no-repeat center center fixed;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 35em;
+  }
+  .featured {
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   grid-template-rows: auto;
+   margin: 3em 0 6em 0;
+  }
+  .head-featured {
+      justify-self: flex-start;
+      align-self: center;
+  }
+  .btn-featured {
+    justify-self: flex-end;
+    align-self: center;
+  }
+  .featured-project-one {
+      background: linear-gradient(to bottom, rgba(0,0,0, 0.2),
+       rgba(0,0,0,0.5)), url(../assets/portfolio/tablet/image-del-sol.jpg);
+       grid-row: 2;
+       grid-column: 1 / -1;
+  }
+  .featured-project-two {
+      background: linear-gradient(to bottom, rgba(0,0,0,0.2),
+       rgba(0,0,0,0.5)), url(../assets/portfolio/tablet/image-228b.jpg);
+       grid-row: 3;
+       grid-column: 1 / -1;
+  }
+  .featured-project-three {
+      background: linear-gradient(to bottom, rgba(0,0,0,0.2),
+      rgba(0,0,0,0.5)), url(../assets/portfolio/tablet/image-prototype.jpg);
+      grid-row: 4;
+      grid-column: 1 / -1;
+  }
+  .featured-project-one,
+  .featured-project-two,
+  .featured-project-three {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;;
+    height: 15em;
+    position: relative;
+  }
+  .num-feature {
+      display: block;
+      position: absolute;
+      top: -0.1em;
+      right: 0;
+      font-weight: 700;
+      font-size: 10em;
+      opacity: 0.5;
+  }
+  footer {
+     display: flex;
+     flex-direction: row; 
+     justify-content: space-between;
+     align-items: center;
+     width: 85%;
+  }
+  .footer-logo {
+      position: static;
+      margin: 0;
+  }
+  .footer-link {
+    display: flex;
+    margin: 0;
+  }
+  .footer-link li {
+    padding-left: 1.5em;
+    margin: 0;
+  }
+  .footer-btn {
+      position: relative;
+      left: 4em;
+      top: 1.5em;
+  } 
+}
+@media (min-width: 768px) {
+    .faded-welcome {
+        display: block;
+        color: var(--very-light-gray);
+    }
+    .faded-welcome h1 {
+        margin: 0;
+        font-size: 7.8em;      
+    }
+}
+@media (min-width: 1025px){ 
+    .wrapper {
+        width: 69em;
+    }
+    nav {
+        justify-content: flex-start;
+        padding: 2.5em 0;
+    } 
+    .logo {
+        width: 6em;
+    }
+    .nav-logo {
+        padding-right: 4em;
+    } 
+    .line {
+        width: 1px;
+        height: 5em;
+        background-color: var(--medium-gray);
+        position: absolute;
+        left: -6%;
+        top: 0;
+        opacity: 0.6;
+    }
+    .home {
+       display: block;
+       position: absolute;
+       left: -3em;
+       top: 10em;
+       opacity: 0.6;
+       color: var(--medium-gray);
+       transform: rotate(90deg);
+       letter-spacing: 0.5em;
+     } 
+     header {
+         overflow: visible;
+     }
+     header h2 {
+         font-size: 5em;
+     }
+     .slide-header {
+        top: 2.1em;
+        left: 2.2em; 
+     } 
+     .head-para {
+        left: 11em;
+        top: 21em;
+        width: 40%;
+     }
+     .btn-head {
+         position: relative;
+         top: -16em;
+         left: 11.5em;
+     }
+     .head {
+        height: 45em;
+    }
+  .image-header-one {      
+    background: linear-gradient(to bottom, rgba(0,0,0,0.2),
+             rgba(0,0,0,0.6)), url(../assets/home/desktop/image-hero-paramour.jpg);
+ }
+ .image-header-two {      
+    background: linear-gradient(to bottom, rgba(0,0,0,0.2),
+             rgba(0,0,0,0.6)), url(../assets/home/desktop/image-hero-seraph.jpg);
+ }
+ .image-header-three {      
+    background: linear-gradient(to bottom, rgba(0,0,0,0.2),
+             rgba(0,0,0,0.6)), url(../assets/home/desktop/image-hero-federal.jpg);
+ }
+ .image-header-four {      
+    background: linear-gradient(to bottom, rgba(0,0,0,0.2),
+             rgba(0,0,0,0.6)), url(../assets/home/desktop/image-hero-trinity.jpg); 
+ }
+ .image-header-one,
+ .image-header-two,
+ .image-header-three,
+ .image-header-four {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 70em;
+    height: 45em;
+    margin: auto;
+ }
+ .span-btn {
+     align-self: flex-start;
+     position: relative;
+     bottom: 8.9em;
+     display: flex;
+     margin-left: -4.2em;
+ }
+ .dot {
+    cursor: pointer; 
+    padding: 1.5em;
+    color: var(--very-dark-blue);
+    background-color: var(--very-light-gray);
+    transition: background-color 0.6s ease; 
+ }
+ .active {
+    color: #fff;
+    background-color: var(--very-dark-blue);
+ }
+ .fade {
+     animation-name: fade;
+     animation-duration: 1.5s;
+ }
+ @keyframes fade {
+     from {opacity: 0.4}
+     to {opacity: 1};
+ }
+ .dot:hover {
+     background-color: var(--medium-gray);
+     color: #fff;
+ }
+main {
+    margin-bottom: 8em;
+} 
+.main-welcome {
+     background: url(../assets/home/desktop/image-welcome.jpg);
+     background-repeat: no-repeat;
+     background-position: right center;
+     padding: 2em 0 10em 0;
+     display: grid;
+     justify-content: left;
+ }
+ .hrz {
+     display: none;
+ }
+ .faded-welcome {
+     display: block;
+     color: var(--very-light-gray);
+ }
+ .faded-welcome h1 {
+     font-size: 11.5em;
+     margin: 0;
+ } 
+ .main-paragraph {
+     width: 37em;
+     padding-left: 10em;
+ }
+ .main-welcome h3 {
+     margin-top: 0;
+ }
+
+ .big-ideas {
+     background: linear-gradient(rgba(0,0,0,0.2),
+      rgba(0,0,0,0.5)), url(../assets/home/desktop/image-small-team.jpg);
+     background-repeat: no-repeat;
+     width: 100%;
+     height: 37em;
+     margin-bottom: 8em;  
+     justify-content: center;
+ }
+ .big-ideas h3 {
+    margin-left: 4.5em; 
+ }
+ .btn-ideas {
+     margin-left: 12em;
+ }
+ .featured {
+     display: grid;
+     row-gap: 3em;
+     column-gap: 2em;
+     margin: 0;
+     grid-template-columns: 1fr 1fr 1fr;  
+ }
+ .featured-hd {
+    grid-row: 1;
+    grid-column: 1 / 2;
+    align-self: center;
+ }
+ .btn-featured {
+     grid-row: 1;
+     justify-self: right;
+     align-self: center;
+     grid-column: 3 / 4;
+ }
+ .featured-project-one {
+     grid-row: 2;
+     grid-column: 1 / 2;
+     background: linear-gradient(rgba(0,0,0,0.2),
+       rgba(0,0,0,0.5)), url(../assets/portfolio/desktop/image-del-sol.jpg);
+ }
+ .featured-project-two {
+     grid-row: 2;
+     grid-column: 2 / 3;
+     background: linear-gradient(rgba(0,0,0,0.2),
+       rgba(0,0,0,0.5)), url(../assets/portfolio/desktop/image-228b.jpg);
+ }
+ .featured-project-three {
+     grid-row: 2;
+     grid-column: 3 / 4;
+     background: linear-gradient(rgba(0,0,0,0.2),
+       rgba(0,0,0,0.5)), url(../assets/portfolio/desktop/image-prototype.jpg);     
+ }
+ .featured-project-one,
+ .featured-project-two,
+ .featured-project-three {
+     background-repeat: no-repeat;  
+     width: 100%;
+     height: 35em; 
+ }
+ .head-featured h3 {
+     margin: 0;
+ }
+ .featured-project-one:hover,
+ .featured-project-two:hover,
+ .featured-project-three:hover {
+     transform: translateY(1em);
+     transition: 0.3s ease-in-out;
+ }
+ .num-feature {
+    position: absolute;
+    font-size: 10em;
+    top: 0;
+    right: 0;
+    font-weight: 600;
+    opacity: 0.5;
+ }
+ footer {
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+ }
+ .footer-logo {
+     position: static;
+     margin: 0;
+ }
+ .footer-link {
+   display: flex;
+   margin: 0;
+ }
+ .footer-link li {
+   padding-right: 2.5em;
+   margin: 0;
+ }
+ .footer-btn {
+     position: relative;
+     left: 8em;
+     top: 1.5em;
+ } 
+}
+
+
+
+

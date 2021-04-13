@@ -1,0 +1,552 @@
+html {
+    font-size: 100%;
+    box-sizing: border-box;
+}
+ *, *::after, *::before {
+    box-sizing: inherit;
+}
+:root {
+   --very-dark-blue: #1b1d23;
+   --dark-gray: #60636d;
+   --medium-gray: #7d828f;
+   --light-gray: #c8ccd8;
+   --very-light-gray: #eeeff4;
+   --red: #df5656;
+}
+body {
+    padding: 0;
+    margin: 0;
+    line-height: 1.5;
+    font-size: 0.9em;
+    font-family: "Spartan", sans-serif; 
+}
+.wrapper {
+    margin: 0 auto;
+}
+.overlay {
+    position: fixed;
+    top: 5.5em;;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    display: none;
+    cursor: not-allowed;
+    background-color:rgba(0,0,0, 0.5);
+}
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    letter-spacing: 1px;;
+    padding: 1.5em 2em;
+    color: #fff;
+    font-weight: 700;
+    background-color: var(--very-dark-blue);
+}
+.btn:hover {
+    background-color: var(--medium-gray);
+}
+.btn:active {
+    opacity: 0.4;
+}
+.arrow {
+    font-size: 2em;
+    padding-left: 1em;
+}
+h1 {
+    font-size: 4.5em;
+}
+h2 {
+    font-size: 3.5em;
+    line-height: 1;
+}
+h3 {
+   font-size: 2.5em;
+   line-height: 1.2;
+}
+
+/* nav styling stars here */
+.logo {
+    cursor: pointer;
+    width: 5em;
+}
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5em;
+    position: relative;
+    
+}
+.nav-links {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    position: relative;
+}
+.nav-links a {
+    text-decoration: none;
+    color: var(--very-dark-blue);
+    font-weight: 600;
+    margin-left: 3em;
+    position: relative;
+}
+.close,
+.hamburger {
+    border: none;
+    background: transparent;
+    position: absolute;
+    top: 2.5em;
+    right: 1.5em;
+    z-index: 3;
+    outline: none;
+    display: none;
+    cursor: pointer;
+}
+.close.show{
+    display: block;
+}
+.home {
+    display: none;
+}
+.nav-links a::after {
+    content: "";
+    background-color: var(--very-dark-blue);
+    height: 2px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: -18px;
+    transition: transform 0.2s ease;
+    opacity: 0;
+}
+.nav-links a:hover::after {
+    transform: translateY(-15px);
+    opacity: 1;
+}
+
+/* main styling starts here */
+main {
+    display: grid;
+    grid-gap: 1.25em;
+    align-items: center;
+    color: #fff;
+    padding: 0 2.5em 8em 2.5em;
+}
+.projects {
+    display: grid;
+    justify-content: left;
+    align-items: flex-end;
+    padding: 2em;
+}
+.project-name {
+    font-weight: 600;
+    margin: 0;
+}
+.project-year {
+    font-size: 0.8em;
+    margin: 0;
+}
+.project-one {
+    background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.5)),
+                url(../assets/portfolio/mobile/image-seraph.jpg);     
+}
+.project-two {
+    background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.5)),
+                url(../assets/portfolio/mobile/image-eebox.jpg);  
+}
+.project-three {
+    background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.5)),
+                url(../assets/portfolio/mobile/image-federal.jpg);       
+}
+.project-four {
+    background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.5)),
+                url(../assets/portfolio/mobile/image-del-sol.jpg);     
+}
+.project-five {
+    background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.5)),
+                url(../assets/portfolio/mobile/image-prototype.jpg);          
+}
+.project-six {
+    background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.5)),
+                url(../assets/portfolio/mobile/image-228b.jpg);     
+}
+.project-seven {
+    background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.5)),
+                url(../assets/portfolio/mobile/image-edelweiss.jpg);         
+}
+.project-eight {
+    background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.5)),
+                url(../assets/portfolio/mobile/image-netcry.jpg);      
+}
+.project-nine {
+    background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.5)),
+                url(../assets/portfolio/mobile/image-hypers.jpg);           
+}
+.project-ten {
+    background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.5)),
+                url(../assets/portfolio/mobile/image-sxiv.jpg);       
+}
+.project-eleven {
+    background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.5)),
+                url(../assets/portfolio/mobile/image-trinity.jpg);     
+}
+.project-twelve {
+    background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.5)),
+                url(../assets/portfolio/mobile/image-paramour.jpg);
+}
+.img {
+   background-repeat: no-repeat;
+   background-size: cover;
+   width: 100%;
+   height: 15em;
+   cursor: pointer;
+}
+.img:hover {
+    transform: translateY(5px);
+    transition: 0.3s ease-in-out;
+}
+
+/* footer starts here */
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--very-light-gray);
+    position: relative;
+}
+.footer-logo {
+    text-align: center;
+    padding: 3em 2em;
+    top: -4em;
+    cursor: pointer;
+    background-color: var(--very-dark-blue);
+    position: absolute;
+}
+.footer-img {
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(230deg) brightness(101%) contrast(102%);
+    width: 5em;
+    text-align: center;
+}
+.footer-link {
+    list-style-type: none;
+    font-weight: 700;
+    padding: 0;
+    margin-top: 5em;
+}
+.footer-link li {
+    margin: 2em 0;
+}
+.footer-link a {
+    color: var(--dark-gray);
+    text-decoration: none;  
+}
+.footer-link a:hover {
+    opacity: 0.5;
+}
+.footer-btn {
+    margin-bottom: 3em;
+}
+
+
+@media (max-width: 757px){
+    .nav-links {
+        position: fixed;
+        flex-direction: column;
+        align-items: flex-start;
+        top: 5.5em;
+        color: var(--very-dark-blue);
+        background-color: var(--very-light-gray);
+        width: 100%;
+        left: 5%;
+        z-index: 2;
+        transform: translateX(140%);
+        transition: 0.5s ease;
+    }
+    .nav-links li:first-child {
+        margin-top: 3em;
+    }
+    .nav-links li:last-child {
+        margin-bottom: 3em;
+    }
+     .nav-links li {
+        margin: 1em 0 1em 3em;;
+    }
+    .nav-links a {
+        font-weight: 800;
+        font-size: 1.2em;
+        margin: 0;
+    }
+    .nav-links.show {
+       transform: translateX(0);
+    }
+    .hamburger {
+         display: block;
+         cursor: pointer;
+    }
+    .nav-logo {
+        margin-right: auto;
+    }
+ }
+ 
+
+
+ @media (min-width: 758px) and (max-width: 1024px) {   
+    nav {
+        padding: 2.5em 7.5em;
+        justify-content: flex-start;
+    } 
+    .nav-links li{
+        padding-left: 3em;
+    } 
+    .nav-links a {
+     margin: 0;
+  }
+   .line {
+       width: 1px;
+       height: 4.7em;
+       background-color: var(--medium-gray);
+       position: absolute;
+       left: 5em;
+       top: 0;
+       opacity: 0.6;
+   }
+   .home {
+      display: block;
+      position: absolute;
+      left: -6em;
+      top: 12.5em;
+      opacity: 0.6;
+      color: var(--medium-gray);
+      transform: rotate(90deg);
+      letter-spacing: 0.5em;
+   }
+   main {
+       padding: 0 7.5em;
+   }
+   main {
+       margin-bottom: 8em;
+   }
+  .projects {
+      display: grid;
+      align-items: center; 
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+  }
+  .project-one {
+    background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.5)),
+                url(../assets/portfolio/tablet/image-seraph.jpg);           
+}
+.project-two {
+    background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.5)),
+                url(../assets/portfolio/tablet/image-eebox.jpg);         
+}
+.project-three {
+    background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.5)),
+                url(../assets/portfolio/tablet/image-federal.jpg);          
+}
+.project-four {
+    background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.5)),
+                url(../assets/portfolio/tablet/image-del-sol.jpg);           
+}
+.project-five {
+    background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.5)),
+                url(../assets/portfolio/tablet/image-prototype.jpg);           
+}
+.project-six {
+    background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.5)),
+                url(../assets/portfolio/tablet/image-228b.jpg);           
+}
+.project-seven {
+    background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.5)),
+                url(../assets/portfolio/tablet/image-edelweiss.jpg);         
+}
+.project-eight {
+    background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.5)),
+                url(../assets/portfolio/tablet/image-netcry.jpg);        
+}
+.project-nine {
+    background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.5)),
+                url(../assets/portfolio/tablet/image-hypers.jpg);         
+}
+.project-ten {
+    background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.5)),
+                url(../assets/portfolio/tablet/image-sxiv.jpg);       
+}
+.project-eleven {
+    background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.5)),
+                url(../assets/portfolio/tablet/image-trinity.jpg);         
+}
+.project-twelve {
+    background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.5)),
+                url(../assets/portfolio/tablet/image-seraph.jpg);          
+}
+.img {
+   background-repeat: no-repeat;
+   background-size: cover;
+   width: 100%;
+   height: 15em;
+   cursor: pointer;
+}
+footer {
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-between;
+    align-items: center;
+    width: 85%;
+ }
+ .footer-logo {
+     position: static;
+     margin: 0;
+ }
+ .footer-link {
+   display: flex;
+   margin: 0;
+ }
+ .footer-link li {
+   padding-left: 1.5em;
+   margin: 0;
+ }
+ .footer-btn {
+     position: relative;
+     left: 4em;
+     top: 1.5em;
+ } 
+  
+}
+
+  
+@media (min-width: 1025px){ 
+    .wrapper {
+        width: 69em;
+    }
+    nav {
+        justify-content: flex-start;
+        padding: 2.5em 0;
+    } 
+    .logo {
+        width: 6em;
+    }
+    .nav-logo {
+        padding-right: 4em;
+    } 
+    .line {
+        width: 1px;
+        height: 5em;
+        background-color: var(--medium-gray);
+        position: absolute;
+        left: -6%;
+        top: 0;
+        opacity: 0.6;
+    }
+    .home {
+       display: block;
+       position: absolute;
+       left: -6em;
+       top: 12.8em;
+       opacity: 0.6;
+       color: var(--medium-gray);
+       transform: rotate(90deg);
+       letter-spacing: 0.5em;
+     } 
+   main {
+       display: grid;
+       grid-template-columns: repeat(3, 1fr);
+       width: 69.3em;
+       padding: 0;
+       margin-bottom: 8em;
+   }
+   .project-one {
+    background: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0.3)),
+                url(../assets/portfolio/desktop/image-seraph.jpg);           
+}
+.project-two {
+    background: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0.3)),
+                url(../assets/portfolio/desktop/image-eebox.jpg);      
+}
+.project-three {
+    background: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,3)),
+                url(../assets/portfolio/desktop/image-federal.jpg);
+    background-repeat: no-repeat;   
+    background-position: center;           
+    width: 21.8em;
+    height: 35em;           
+}
+.project-four {
+    background: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0.3)),
+                url(../assets/portfolio/desktop/image-del-sol.jpg);          
+}
+.project-five {
+    background: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0.3)),
+                url(../assets/portfolio/desktop/image-prototype.jpg);           
+}
+.project-six {
+    background: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0.3)),
+                url(../assets/portfolio/desktop/image-228b.jpg);            
+}
+.project-seven {
+    background: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0.3)),
+                url(../assets/portfolio/desktop/image-edelweiss.jpg);            
+}
+.project-eight {
+    background: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0.3)),
+                url(../assets/portfolio/desktop/image-netcry.jpg);         
+}
+.project-nine {
+    background: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0.3)),
+                url(../assets/portfolio/desktop/image-hypers.jpg);           
+}
+.project-ten {
+    background: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0.3)),
+                url(../assets/portfolio/desktop/image-sxiv.jpg);        
+}
+.project-eleven {
+    background: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0.3)),
+                url(../assets/portfolio/desktop/image-trinity.jpg);           
+}
+.project-twelve {
+    background: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0.3)),
+                url(../assets/portfolio/desktop/image-paramour.jpg);         
+}
+.img  {
+   background-repeat: no-repeat;
+   background-size: cover;
+   width: 100%;
+   height: 35em;
+   cursor: pointer;
+}
+footer {
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+ }
+ .footer-logo {
+     position: static;
+     margin: 0;
+ }
+ .footer-link {
+   display: flex;
+   margin: 0;
+ }
+ .footer-link li {
+   padding-right: 2.5em;
+   margin: 0;
+ }
+ .footer-btn {
+     position: relative;
+     left: 8em;
+     top: 1.5em;
+ } 
+}
+
+

@@ -1,0 +1,598 @@
+html {
+    font-size: 100%;
+    box-sizing: border-box;
+}
+ *, *::after, *::before {
+    box-sizing: inherit;
+}
+:root {
+   --very-dark-blue: #1b1d23;
+   --dark-gray: #60636d;
+   --medium-gray: #7d828f;
+   --light-gray: #c8ccd8;
+   --very-light-gray: #eeeff4;
+   --red: #df5656;
+}
+body {
+    padding: 0;
+    margin: 0;
+    line-height: 1.5;
+    font-size: 0.9em;
+    font-family: "Spartan", sans-serif; 
+}
+.wrapper {
+    margin: 0 auto;
+}
+.overlay {
+    position: fixed;
+    top: 5.5em;;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    display: none;
+    cursor: not-allowed;
+    background-color:rgba(0,0,0, 0.5);
+}
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    letter-spacing: 1px;;
+    padding: 1.5em 2em;
+    color: #fff;
+    font-weight: 700;
+    background-color: var(--very-dark-blue);
+}
+.btn:hover {
+    background-color: var(--medium-gray);
+}
+.btn:active {
+    opacity: 0.4;
+}
+.arrow {
+    font-size: 2em;
+    padding-left: 1em;
+}
+h1 {
+    font-size: 4.5em;
+}
+h2 {
+    font-size: 3.5em;
+    line-height: 1;
+}
+h3 {
+   font-size: 2.5em;
+   line-height: 1.2;
+}
+
+/* nav styling stars here */
+.logo {
+    cursor: pointer;
+    width: 5em;
+}
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5em;
+    position: relative;
+    
+}
+.nav-links {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    position: relative;
+}
+.nav-links a {
+    text-decoration: none;
+    color: var(--very-dark-blue);
+    font-weight: 600;
+    margin-left: 3em;
+    position: relative;
+}
+.close,
+.hamburger {
+    border: none;
+    background: transparent;
+    position: absolute;
+    top: 2.5em;
+    right: 1.5em;
+    z-index: 3;
+    outline: none;
+    display: none;
+    cursor: pointer;
+}
+.close.show{
+    display: block;
+}
+.home {
+    display: none;
+}
+.nav-links a::after {
+    content: "";
+    background-color: var(--very-dark-blue);
+    height: 2px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: -18px;
+    transition: transform 0.2s ease;
+    opacity: 0;
+}
+.nav-links a:hover::after {
+    transform: translateY(-15px);
+    opacity: 1;
+}
+
+/* header styling starts here */
+.about {
+    display: none;
+    color: var(--light-gray);
+}
+ .img-header {
+     background: url(../assets//about/mobile/image-hero.jpg);
+     background-repeat: no-repeat;
+     background-position: center;
+     background-size: cover;
+     width: 100%;
+     height: 18em;
+ } 
+ .team-wrapper {
+    position: relative;
+    width: 92%;
+    padding: 2em 1em 0 2em;
+    margin-top: -2em;
+    background-color: #fff;
+ }
+ .horizontal-about,
+ .horizontal {
+     width: 4em;
+     height: 1px;
+     background-color: var(--very-dark-blue);
+     margin: 2em 0 4em 0;  
+ }
+ .horizontal-about {
+    display: none;
+}
+.team-para-holder h3 {
+    width: 8em;
+}
+.heritage {
+    width: 92%;
+    padding: 2em 1em  0 2em;
+}
+.heritage h3 {
+    width: 6em;
+}
+
+/* main styling starts here */
+main {
+    padding: 2em;
+}
+.main-head h3 {
+    width: 6em;
+}
+ .leaders {
+     padding-bottom: 6em;
+ }
+ .name {
+     font-weight: 800;
+     margin-bottom: 0;
+ }
+ .title {
+     margin: 0.5em 0;
+ }
+ .social-media {
+     font-size: 2em;
+ }
+ .social-media i:first-child {
+     padding-right: 10px;
+ }
+ .richard-photo,
+ .smith-photo,
+ .rourke-photo,
+ .simpson-photo {
+   height: 100%;
+   width: 100%;
+   overflow: hidden;
+   margin: 2em 0 1em 0;
+}
+.richard-photo img,
+.smith-photo img,
+.rourke-photo img,
+.simpson-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.main-img-layover{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 2em;
+    position:  absolute;
+    transition: .5s ease-in-out;
+    opacity: 0;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    background-color:rgba(0,0,0, 0.5);
+ }
+ .check {
+    position: relative;
+}
+  .check:hover .main-img-layover {
+      opacity: 1;
+  }
+ .social-media >a {
+     color: black;
+ }
+ 
+/* footer starts here */
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--very-light-gray);
+    position: relative;
+}
+.footer-logo {
+    text-align: center;
+    padding: 3em 2em;
+    top: -4em;
+    cursor: pointer;
+    background-color: var(--very-dark-blue);
+    position: absolute;
+}
+.footer-img {
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(230deg) brightness(101%) contrast(102%);
+    width: 5em; 
+    text-align: center;
+}
+.footer-link {
+    list-style-type: none;
+    font-weight: 700;
+    padding: 0;
+    margin-top: 5em;
+}
+.footer-link li {
+    margin: 2em 0;
+}
+.footer-link a {
+    color: var(--dark-gray);
+    text-decoration: none;  
+}
+.footer-link a:hover {
+    opacity: 0.5;
+}
+.footer-btn {
+    margin-bottom: 3em;
+}
+
+
+@media (max-width: 757px){
+    .nav-links {
+        position: fixed;
+        flex-direction: column;
+        align-items: flex-start;
+        top: 5.5em;
+        color: var(--very-dark-blue);
+        background-color: var(--very-light-gray);
+        width: 100%;
+        left: 5%;
+        z-index: 2;
+        transform: translateX(140%);
+        transition: 0.5s ease;
+    }
+    .nav-links li:first-child {
+        margin-top: 3em;
+    }
+    .nav-links li:last-child {
+        margin-bottom: 3em;
+    }
+     .nav-links li {
+        margin: 1em 0 1em 3em;;
+    }
+    .nav-links a {
+        font-weight: 800;
+        font-size: 1.2em;
+        margin: 0;
+    }
+    .nav-links.show {
+       transform: translateX(0);
+    }
+    .hamburger {
+         display: block;
+         cursor: pointer;
+    }
+    .nav-logo {
+        margin-right: auto;
+    }
+ }
+
+
+ @media (min-width: 758px) and (max-width: 1024px) {   
+    nav {
+        padding: 2.5em 7.5em;
+        justify-content: flex-start;
+    } 
+    .nav-links li{
+        padding-left: 3em;
+    } 
+    .nav-links a {
+     margin: 0;
+   }
+   .line {
+       width: 1px;
+       height: 4.7em;
+       background-color: var(--medium-gray);
+       position: absolute;
+       left: 5em;
+       top: 0;
+       opacity: 0.6;
+   }
+   .home {
+      display: block;
+      position: absolute;
+      width: 10em;
+      left: -5.2em;
+      top: 11.5em;
+      opacity: 0.6;
+      color: var(--medium-gray);
+      transform: rotate(90deg);
+      letter-spacing: 0.5em;
+   }
+   header {
+       padding: 0  7.5em;
+       overflow: hidden;
+   }
+  .img-header {
+      background: linear-gradient(to bottom, rgba(0,0,0,0.5),
+      rgba(0,0,0,0.3)),
+      url(../assets/about/tablet/image-hero.jpg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      width: 100%;
+      height: 45em;
+  }
+  .team-wrapper {
+      right: -6em;
+      top: -24em;
+  }
+  .team-para-holder {
+    position: relative;
+    margin: -12em;
+    width: 100%;
+    position: relative;
+    left: 11em;
+    padding: 0 2em 3em 2em;
+ }
+  .about {
+      display: block;
+      position: relative;
+      color: var(--very-light-gray);
+      top: -8em;
+      left: 4em;
+  }
+  .about h1 {
+      margin: 0;
+      font-size: 8em;
+  }
+  .horizontal-about {
+      display: block;
+      margin: 4em 0;
+  } 
+  .horizontal {
+     margin: 0;
+  }
+
+ .heritage {
+      padding: 0;
+      width: 100%;
+      margin-top: -16em;
+  }
+  main {
+      display: grid;
+      padding: 0 7.5em;
+  }
+  .leaders {
+      display: grid;
+      grid-gap: 10px;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto;
+  }
+  .richard-photo,
+  .smith-photo,
+  .rourke-photo,
+  .simpson-photo {
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+  }
+
+  footer {
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-between;
+    align-items: center;
+    width: 85%;
+ }
+ .footer-logo {
+     position: static;
+     margin: 0;
+ }
+ .footer-link {
+   display: flex;
+   margin: 0;
+ }
+ .footer-link li {
+   padding-left: 1.5em;
+   margin: 0;
+ }
+ .footer-btn {
+     position: relative;
+     left: 4em;
+     top: 1.5em;
+ } 
+}
+ 
+
+
+@media (min-width: 1025px){ 
+    .wrapper {
+        width: 69em;
+    }
+    nav {
+        justify-content: flex-start;
+        padding: 2.5em 0;
+    } 
+    .logo {
+        width: 6em;
+    }
+    .nav-logo {
+        padding-right: 4em;
+    } 
+    .line {
+        width: 1px;
+        height: 5em;
+        background-color: var(--medium-gray);
+        position: absolute;
+        left: -6%;
+        top: 0;
+        opacity: 0.6;
+    }
+    .home {
+       display: block;
+       position: absolute;
+       left: -5.3em;
+       top: 12.2em;
+       opacity: 0.6;
+       width: 10em;
+       color: var(--medium-gray);
+       transform: rotate(90deg);
+       letter-spacing: 0.5em;
+     }
+
+   header {
+       overflow: hidden;
+   }
+   .img-header {
+    background: linear-gradient(to right, rgba(0,0,0,0.2), rgba(0,0,0,0.5)),
+                url(../assets/about/desktop/image-hero.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 40em;  
+    height: 45em;  
+}
+   .team-wrapper {
+       position: relative;
+       width: 100%;
+       padding: 0;
+       margin-top: -34em;
+       margin-left: 30em;
+   }
+   .about {
+       display: block;
+       position: absolute;
+       top: -9em;
+       color: var(--very-light-gray);
+   }
+   .about h1 {
+       margin: 0;
+       font-size: 11.5em;
+   }
+   .team-para-holder {
+       padding: 10em 3em 14em 6em;
+       width: 40em;
+   }
+   .horizontal-about {
+       display: block;
+       margin: 0 0 6em 0;
+   }
+   .horizontal {
+       margin: 0;
+   }
+   .heritage {
+      padding: 0;
+      width: 25em;
+      float: left;
+   }
+   .heritage  h3 {
+       margin: 2em 0 1em 0;
+   }
+   .about-desktop-img {
+       background-image: url(../assets/about/desktop/image-heritage.jpg);
+       background-repeat: no-repeat;
+       background-position: center;
+       width: 33.7em;
+       height: 35.5em;
+       float: right;
+   }
+   main {
+       display: grid;
+       grid-template-columns: 1fr 2fr;
+       padding: 0;
+       margin: 10em 0 10em 0;
+   }
+   .main-head h3 {
+       margin: 0;
+   }
+   .richard-photo,
+   .smith-photo,
+   .rourke-photo,
+   .simpson-photo {
+       margin: 0;
+   }
+   .social-media {
+       display: none;
+   }
+   .leaders {
+    display: grid;
+    column-gap: 1em;
+    row-gap: 4em;
+    padding: 0;
+    align-items: flex-start;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+}  
+footer {
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+ }
+ .footer-logo {
+     position: static;
+     margin: 0;
+ }
+ .footer-link {
+   display: flex;
+   margin: 0;
+ }
+ .footer-link li {
+   padding-right: 2.5em;
+   margin: 0;
+ }
+ .footer-btn {
+     position: relative;
+     left: 8em;
+     top: 1.5em;
+ } 
+}
