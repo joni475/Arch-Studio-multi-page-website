@@ -19,34 +19,7 @@ overlay.classList.remove("show");
 });
 
 
-//automatic slides
-// var slideIndex = 0;
-// showSlides();
-
-// function currentSlide(n){
-//   showSlides(slideIndex = n);
-// }
-
-// function showSlides() {
-
-//   let i;
-//   let slidesAuto = document.querySelectorAll(".slide");
-//   let dots = document.querySelectorAll(".dot");
-//   for (i = 0; i < slidesAuto.length; i++) {
-//     slidesAuto[i].style.display = "none";  
-//   }
-//   slideIndex++;
-//   if (slideIndex > slidesAuto.length) {slideIndex = 1}    
-//   for (i = 0; i < dots.length; i++) {
-//     dots[i].className = dots[i].className.replace(" active", "");
-//   }
-//   slidesAuto[slideIndex-1].style.display = "block";  
-//   dots[slideIndex-1].className += " active";
-//     setTimeout(showSlides, 4000); 
-// }
-        
-
-
+    
 
 var slideIndex = 1;
 showSlides(slideIndex);
