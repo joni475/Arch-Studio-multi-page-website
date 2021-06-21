@@ -1,6 +1,7 @@
 const hamburger = document.querySelector(".hamburger");
 const navLinks = document.querySelector(".nav-links");
 const close = document.querySelector(".close");
+const body = document.querySelector("body");
 //overlay
 const overlay = document.querySelector(".overlay");
 
@@ -9,6 +10,7 @@ hamburger.addEventListener("click",()=>{
 overlay.classList.add("show");
  close.classList.add("show");
  hamburger.style.visibility ="hidden";
+ body.style.overflow = "hidden";
 });
 
 close.addEventListener("click",()=>{
@@ -16,6 +18,7 @@ close.addEventListener("click",()=>{
  close.classList.remove("show");
 overlay.classList.remove("show");
  hamburger.style.visibility ="visible";
+ body.style.overflow = "auto";
 });
 
 

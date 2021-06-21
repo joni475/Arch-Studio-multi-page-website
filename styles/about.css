@@ -4,8 +4,8 @@ html {
 }
 
 *,
-*::after,
-*::before {
+*::before,
+*::after {
     box-sizing: inherit;
 }
 
@@ -341,7 +341,7 @@ footer {
 
 @media (max-width: 757px) {
     .nav-links {
-        position: absolute;
+        position: fixed;
         flex-direction: column;
         align-items: flex-start;
         top: 5.5em;
@@ -350,8 +350,8 @@ footer {
         width: 100%;
         left: 5%;
         z-index: 2;
-        transform: translateX(140%);
-        transition: 0.5s ease;
+        transform: translateX(100%);
+        transition: transform 0.5s ease;
     }
 
     .nav-links li:first-child {
